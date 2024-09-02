@@ -1,0 +1,88 @@
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+}
+.App{
+
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+.App >div{
+  height: 50%;
+}
+.App .timer{
+  position: absolute;
+  right: 0;
+  top: -70px;
+  border: 1px solid black;
+  padding: 20px;
+}
+.App .answerArea{
+  display: flex;
+  flex-wrap: wrap;  
+}
+.App .answerButtons{
+  width: 50%;
+  position: relative;
+  
+}
+.answerButtons::before{
+  content: '';
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    color: red;
+    left: 0;
+    top: 0;
+    font-size: 30px;
+}
+.answerButtons:nth-of-type(1)::before{
+  content: 'A';
+}
+.answerButtons:nth-of-type(2)::before{
+  content: 'B';
+}
+.answerButtons:nth-of-type(3)::before{
+  content: 'C';
+}
+.answerButtons:nth-of-type(4)::before{
+  content: 'D';
+}
+
+.App-result{
+  width: 100%;
+  height: auto;
+  
+}
+.App .result-container{
+  display: flex;
+  flex-flow: column;
+  overflow: auto;
+}
+.App .result-row{
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
+  padding: 10px 20px;
+  gap: 10px;
+}
+.App .result-row > div{
+
+    text-align: center;
+}
+
+.App .result-row  div[disabled] {
+  border: 2px solid  rgb(255, 72, 0);
+  width:"auto"  ;
+}
+.App .result-row  div:not([disabled]) {
+  border: 4px solid rgb(22, 197, 189);
+}
