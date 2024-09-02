@@ -5,7 +5,7 @@ import Timer from "./components/timer.js";
 import ResultRow from "./components/resultRow.js";
 
 function App() {
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(30);
   const [options, setOptions] = useState([]);
   const [dataJson, setDataJson] = useState([]);
   const [questions, setQuestions] = useState([]);
@@ -17,7 +17,7 @@ function App() {
 
   const resetTimer = () => {
     setisDisable(false);
-    setTimer(2);
+    setTimer(30);
     setcurrentIndex(currentIndex + 1);
     if (currentIndex >= 10) {
       setIsItEnd(true);
